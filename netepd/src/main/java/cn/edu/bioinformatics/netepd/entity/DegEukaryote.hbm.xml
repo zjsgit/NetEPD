@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.edu.bioinformatics.netepd.entity.DegEukaryote" table="degeukaryote">
+        <id name="degAC" type="java.lang.String">
+            <column name="DEG_AC" />
+        </id>
+        <property name="geneName" type="java.lang.String">
+            <column name="GENE_NAME" />
+        </property>
+        <property name="geneRef" type="java.lang.String">
+            <column name="GENE_REF" />
+        </property>
+        <property name="function" type="java.lang.String">
+            <column name="FUNCTION" />
+        </property>
+        <property name="organism" type="java.lang.String">
+            <column name="ORGANISM" />
+        </property>
+    </class>
+</hibernate-mapping>

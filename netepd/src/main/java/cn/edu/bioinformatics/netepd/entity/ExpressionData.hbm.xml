@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.edu.bioinformatics.netepd.entity.ExpressionData" table="expressiondata">
+        <id name="id" type="java.lang.Integer">
+            <column name="GENE_ID" />
+            <generator class="native" />
+        </id>
+        <property name="geneName" type="java.lang.String">
+            <column name="GENE_NAME" />
+        </property>
+        <property name="organismId" type="java.lang.String">
+            <column name="ORGANISM_ID" />
+        </property>
+        <property name="expressionData" type="java.lang.String">
+            <column name="EXPRESSION_DATA" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

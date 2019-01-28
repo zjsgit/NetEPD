@@ -1,0 +1,25 @@
+.form-area {
+    resize: none;
+    word-wrap: normal;
+}
+#btn-upload{
+    height: 36px;
+    width: 80px;
+    /*border-radius:12px;*/
+}
+#filename{
+    height: 36px;
+    width: 230px;
+    line-height: 36px;
+    margin-left: 6px;
+    border: 1px solid #46b8da;
+    padding-left: 8px;
+    border-radius: 4px;
+}
+#sub-net{
+	margin-top:25px;
+	height: 36px;
+}
+#select-file{
+	display: none;
+}

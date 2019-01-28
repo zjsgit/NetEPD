@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.edu.bioinformatics.netepd.entity.MipsNetwork" table="mipsnetwork">
+        <id name="id" type="java.lang.Integer">
+            <column name="INTERACTION_ID" />
+            <generator class="native" />
+        </id>
+        <property name="mipsAid" type="java.lang.String">
+            <column name="MIPS_ID_A" />
+        </property>
+        <property name="mipsBid" type="java.lang.String">
+            <column name="MIPS_ID_B" />
+        </property>
+        <property name="fullnameA" type="java.lang.String">
+            <column name="FULLNAME_A" />
+        </property>
+        <property name="fullnameB" type="java.lang.String">
+            <column name="FULLNAME_B" />
+        </property>
+        <property name="xrefA" type="java.lang.String">
+            <column name="XREF_A" />
+        </property>
+        <property name="xrefB" type="java.lang.String">
+            <column name="XREF_B" />
+        </property>
+        <property name="organismAid" type="java.lang.String">
+            <column name="ORGANISM_ID_A" />
+        </property>
+        <property name="organismBid" type="java.lang.String">
+            <column name="ORGANISM_ID_B" />
+        </property>
+    </class>
+</hibernate-mapping>

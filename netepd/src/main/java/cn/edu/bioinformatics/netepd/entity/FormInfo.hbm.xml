@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.edu.bioinformatics.netepd.entity.FormInfo" table="forminfos">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="jobId" type="java.lang.String">
+            <column name="JOB_ID" />
+        </property>
+        <property name="formatType" type="java.lang.String">
+            <column name="JOB_FORMATTYPE" />
+        </property>
+        <property name="algorithms" type="java.lang.String">
+            <column name="JOB_ALGORITHMS" />
+        </property>
+        <property name="filePath" type="java.lang.String">
+            <column name="JOB_FILEPATH" />
+        </property>
+        <property name="taxid" type="java.lang.String">
+            <column name="JOB_TAXID" />
+        </property>
+        <property name="datasets" type="java.lang.String">
+            <column name="JOB_DATASETS" />
+        </property>
+        <property name="jobNote" type="java.lang.String">
+            <column name="JOB_NOTE" />
+        </property>
+        <property name="location" type="java.lang.String">
+            <column name="JOB_LOCATION" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="JOB_EMAIL" />
+        </property>
+        <property name="createdTime" type="java.lang.String">
+            <column name="JOB_CREATEDTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

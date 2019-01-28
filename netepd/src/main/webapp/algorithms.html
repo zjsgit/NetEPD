@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<title>Algorithms Introduction</title>
+<!-- External CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/common-frame.css">
+<link rel="icon" href="img/favicon.ico">
+<style>
+body{background:#F2F2F2;}
+.mainContent{background:#FFF;padding:0 20px;}
+</style>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="container headBg">
+		<div class="headContent">Network-based Essential Protein
+			Discovery</div>
+	</div>
+
+	<!-- 内容 -->
+	<div class="container main">
+		<div class="mainContent">
+			<div style="text-align: right;">
+				<a href="index.jsp">Home <span class="glyphicon glyphicon-home"
+					aria-hidden="true"></span></a>
+			</div>
+			<div class="bg-warning" style="padding:20px 10px;">
+			Given a protein interaction network G=(V,E) and a protein u&isin;V, let N be the total number of nodes in the network,
+			N<sub>u</sub> be the set of neighbors of node u, and A=a(u,v) be the adjacency matrix of the network.
+			If node u doesn't interact with node v, a(u,v)=0; otherwise, a(u,v)=1. So the formulas of the centrality methods are shown as 
+			the following:
+			</div>
+			<div id="dc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">DC (Degree Centrality)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/dc.png" class="img-responsive" alt="Degree Centrality">
+				<em>Jeong H, Mason S P, Barabasi A L, et al. Lethality and centrality in protein networks[J]. Nature, 2001, 411(6833): 41-42.</em>
+				<br><a href="http://dx.doi.org/10.1038/35075138">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="bc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">BC (Betweenness Centrality)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/bc.png" class="img-responsive" alt="Betweenness Centrality">
+				<em>Joy M P, Brock A, Ingber D E, et al. High-betweenness proteins in the 
+				yeast protein interaction network[J]. BioMed Research International, 2005, 2005(2): 96-103.</em>
+				<br><a href="http://dx.doi.org/10.1155/JBB.2005.96">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="cc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">CC (Closeness Centrality)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/cc.png" class="img-responsive" alt="Closeness Centrality">
+				<em>Wuchty S, Stadler P F. Centers of complex networks[J]. Journal of Theoretical Biology, 2003, 223(1): 45-53.</em>
+				<br><a href="http://dx.doi.org/10.1016/S0022-5193(03)00071-7">View Article  <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="ec" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">EC (Eigenvector Centrality)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/ec.png" class="img-responsive" alt="Eigenvector Centrality">
+				<em>Bonacich P. Power and centrality: A family of measures[J]. American journal of sociology, 1987: 1170-1182.</em>
+				<br><a href="http://dx.doi.org/10.1086/228631">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="ic" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">IC (Information Centrality)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/ic.png" class="img-responsive" alt="Information Centrality">
+				<em>Stephenson K, Zelen M. Rethinking centrality: Methods and examples[J]. Social Networks, 1989, 11(1): 1-37.</em>
+				<br><a href="http://dx.doi.org/10.1016/0378-8733(89)90016-6">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="lac" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">LAC (Local Average Connectivity-based method)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/lac.png" class="img-responsive" alt="Local Average Connectivity-based method">
+				<em>Li M, Wang J, Chen X, et al. A local average connectivity-based method for identifying essential proteins 
+				from the network level[J]. Computational biology and chemistry, 2011, 35(3): 143-150.</em>
+				<br><a href="http://dx.doi.org/10.1016/j.compbiolchem.2011.04.002">View Article  <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="nc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">NC (Network Centrality)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/nc.png" class="img-responsive" alt="Network Centrality">
+				<em>Wang J, Li M, Wang H, et al. Identification of essential proteins based on edge clustering coefficient[J]. IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2012, 9(4): 1070-1080.</em>
+				<br><a href="http://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=6081844">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="sc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">SC (Subgraph Centrality)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/sc.png" class="img-responsive" alt="Subgraph Centrality">
+				<em>Estrada E, Rodriguez-Velazquez J A. Subgraph centrality in complex networks[J]. Physical Review E, 2005, 71(5): 056103.</em>
+				<br><a href="http://dx.doi.org/10.1103/PhysRevE.71.056103">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="mnc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">MNC (Maximum Neighborhood Component)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/mnc.png" class="img-responsive" alt="Maximum Neighborhood Component">
+				<em>Lin C Y, Chin C H, Wu H H, et al. Hubba: hub objects analyzer-a framework of interactome hubs identification for network biology[J]. Nucleic acids research, 2008, 36(suppl 2): W438-W443.</em>
+				<br><a href="http://nar.oxfordjournals.org/content/36/suppl_2/W438.short">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="dmnc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">DMNC (Density of Maximum Neighborhood Component)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/dmnc.png" class="img-responsive" alt="Density of Maximum Neighborhood Component">
+				<em>Lin C Y, Chin C H, Wu H H, et al. Hubba: hub objects analyzer-a framework of interactome hubs identification for network biology[J]. Nucleic acids research, 2008, 36(suppl 2): W438-W443.</em>
+				<br><a href="http://nar.oxfordjournals.org/content/36/suppl_2/W438.short">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="lindex" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Lindex (Lobby Index)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/lindex.png" class="img-responsive" alt="Lobby Index">
+				<em>Korn A, Schubert A, Telcs A. Lobby index in networks[J]. Physica A: Statistical Mechanics and its Applications, 2009, 388(11): 2221-2226.</em>
+				<br><a href="http://dx.doi.org/10.1016/j.physa.2009.02.013">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="pagerank" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">PageRank</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/pagerank.png" class="img-responsive" alt="PageRank">
+				<em>Kim S J, Lee S H. An improved computation of the pagerank algorithm[C]//European Conference on Information Retrieval. Springer Berlin Heidelberg, 2002: 73-85.</em>
+				<br><a href="http://link.springer.com/chapter/10.1007/3-540-45886-7_5">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="leaderrank" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">LeaderRank</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/leaderrank.png" class="img-responsive" alt="LeaderRank">
+				<em>Lu L, Zhang Y C, Yeung C H, et al. Leaders in social networks, the delicious case[J]. PloS one, 2011, 6(6): e21202.</em>
+				<br><a href="http://dx.doi.org/10.1371/journal.pone.0021202">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			
+			
+			<!-- zjs methods -->
+			<div id="ecc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">ECC(Eccentricity)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/ecc.png" class="img-responsive" alt="ECC">
+				<em>Hage P, Harary F. Eccentricity and centrality in networks. Social Networks, 1995, 17: 57-63.</em>
+				<br><a href="https://www.researchgate.net/publication/222588148_Eccentricity_and_Centrality_in_Networks">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="slc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">SLC(Semi-local Centrality)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/slc.png" class="img-responsive" alt="SLC">
+				<em>Chen D B, Lv L, Shang M S, et al. Identifying influential nodes in complex networks. Physica A, 2012, 391: 1777-1787.</em>
+				<br><a href="https://www.sciencedirect.com/science/article/pii/S0378437111007333">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="lbc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">LBC(Localized Bridging Centrality)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/lbc.png" class="img-responsive" alt="LBC">
+				<em>Nanda S, Kotz D. Localized Bridging Centrality for Distributed Network Analysis. 2008:62-67.</em>
+				<br><a href="https://ieeexplore.ieee.org/document/4674191">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="neic" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">NeiC(Neighborhood Connectivity)</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/neic.png" class="img-responsive" alt="NeiC">
+				<em>Maslov S, Sneppen K. Specificity and stability in topology of protein networks. Science, 2002, 296(5569):910-913.</em>
+				<br><a href="https://www.ncbi.nlm.nih.gov/pubmed/11988575">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			
+			<div id="dsp" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">DSP</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/dsp.png" class="img-responsive" alt="DSP">
+				<em>Pengxiang Li, Yuqing Ren, Youmin Xi. A measure of the importance of network nodes (sets). Systems engineering,2004,22(4):13-20.</em>
+				<br><a href="http://www.ir.xjtu.edu.cn/item/139862">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+				
+			</div>
+			<div id="mdd" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">MDD</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/mdd.png" class="img-responsive" alt="MDD">
+				<em>An Zeng, Cheng-Jun Zhang, Ranking spreaders by decomposing complex networks, Physics Letters A, Volume 377, Issue 14,2013,Pages 1031-1035.</em>
+				<br><a href="http://www.oalib.com/paper/3323622">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="lccdc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">LCCDC</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/lccdc.png" class="img-responsive" alt="LCCDC">
+				<em>Natarajan Meghanathan. A computationally lightweight and localized centrality metric in lieu of betweenness centrality for complex network analysis.Vietnam Journal of Computer Science, 2017, Volume 4, Number 1, Page 23-38.</em>
+				<br><a href="https://www.infona.pl/resource/bwmeta1.element.springer-doi-10_1007-S40595-016-0073-1">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="whc" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">WHC</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/whc.png" class="img-responsive" alt="WHC">
+				<em>Yu S, Gao L, Wang Y F, et al. Weighted H-index for identifying influential spreaders. 2017.</em>
+				<br><a href="https://arxiv.org/ftp/arxiv/papers/1710/1710.05272.pdf">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="kshell" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">KShell</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/kshell.png" class="img-responsive" alt="KSehll">
+				<em>Kitsak M, Gallos L K, Havlin S, et al. Identification of influential spreaders in complex networks. Nat Phys, 2010, 6:888-893</em>
+				<br><a href="http://www.oalib.com/paper/3285230">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			<div id="mec" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">MEC</h3>
+				</div>
+				<div class="panel-body">
+				<img src="img/algorithms/mec.png" class="img-responsive" alt="MEC">
+				<em>Tingyuan Nie, Zheng GuoUsing, et al. Using mapping entropy to identify node centrality in complex networks. Physica A, 2016, 456:290-297.</em>
+				<br><a href="https://www.sciencedirect.com/science/article/pii/S0378437116001758">View Article <span class="glyphicon glyphicon-share-alt"></span></a>
+				</div>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+
+	<!-- 页脚部分 -->
+	<footer class="footer">
+		<div class="container copyright">
+			Copyright © 2016 <strong>CSU-Bioinformatics Group</strong>.All rights
+			reserved.
+		</div>
+	</footer>
+
+</body>
+</html>

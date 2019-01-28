@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+
+	<!-- 配置自动扫描的包 -->
+	<context:component-scan base-package="cn.edu.bioinformatics.netepd">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan>
+
+	<!-- 配置数据源 -->
+	<!-- 导入资源文件 -->
+	<!-- <context:property-placeholder location="classpath:db.properties,classpath:mail.properties" system-properties-mode="NEVER" /> -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+    	<property name="locations">  
+    	<list>  
+          	<value>classpath:db.properties</value>  
+          	<value>classpath:mail.properties</value>  
+        </list>  
+    	</property>  
+	</bean>
+	
+	<!-- 配置邮件发送设置 -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host">
+			<value>${mail.host}</value>
+		</property>
+		<property name="port">
+			<value>${mail.port}</value>
+		</property>
+		<!-- 发送者邮箱名称 -->
+		<property name="username">
+			<value>${mail.username}</value>
+		</property>
+		<!-- 发送者邮箱客户端授权密码，开通SMTP服务得到 -->
+		<property name="password">
+			<value>${mail.password}</value>
+		</property>
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocal">${mail.transport.protocal}</prop>
+				<prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="mailMessage" class="org.springframework.mail.SimpleMailMessage">  
+        <property name="from">  
+            <value>${mail.from}</value>  
+        </property>  
+        <property name="subject">
+        	<value>${mail.subject}</value>
+        </property>
+        <!-- 查看SimpleMailMessage源码还可以注入标题,内容等 -->
+    </bean> 
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="user" value="${jdbc.user}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+		<property name="driverClass" value="${jdbc.driverClass}"></property>
+		<property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
+
+		<property name="initialPoolSize" value="${jdbc.initPoolSize}"></property>
+		<property name="maxPoolSize" value="${jdbc.maxPoolSize}"></property>
+	</bean>
+
+	<!-- 配置Hibernate的SessionFactory实例：通过Spring提供的Local进行配置 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<!-- 配置数据源属性 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 配置Hibernate配置文件的位置及名称 -->
+		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+		<property name="mappingLocations" value="classpath:cn/edu/bioinformatics/netepd/entity/*.hbm.xml"></property>
+	</bean>
+
+	<!-- 配置Spring的声明式事务 -->
+	<!-- 1.配置事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 2.配置事务属性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="add*" propagation="REQUIRED"/>
+			<tx:method name="del*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="*" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 3.配置事务切点，并把切点和事务属性关联起来 -->
+	<aop:config>
+		<aop:pointcut expression="execution(* cn.edu.bioinformatics.netepd.service.*.*(..))"
+			id="txPointcut" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
+	</aop:config>
+
+</beans>

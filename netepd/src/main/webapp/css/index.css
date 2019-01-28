@@ -1,0 +1,244 @@
+/* 公共部分 */
+.row {
+    max-width: 1140px;
+    min-width: 755px;
+}
+#divLogo{
+	width: 240px;
+	height: 160px;
+	padding-left:20px;
+	float:left;
+}
+/* 头部 */
+.headBg {
+    width: 100%;
+    height: 160px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.headContent {
+    width: 740px;
+    height: 100%;
+/*     margin: 10px auto; */
+	float: right;
+/*     background: #e9e9e9; */
+    line-height: 160px;
+    font-size: 40px;
+    text-align: left;
+
+    /*font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;*/
+    color: #FFF;
+    /*text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;*/
+    font-weight: bold;
+    letter-spacing: -4px;
+}
+/* 内容 */
+.main {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.row {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.left-column {
+    width: 24%;
+    height: 100%;
+    /*min-height: 850px;*/
+    float: left;
+    margin-right: 1%;
+}
+
+.right-column {
+    width: 74%;
+    margin-left: 1%;
+    height: 100%;
+    float: left;
+}
+.menu-first {
+    line-height: 36px;
+    background-color: #e9e9e9;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+}
+.menu-first li a{
+    color: #979898;
+}
+.menu-first li a:hover{
+    text-decoration: none;
+    background-color: #87CEFF;
+    border-right: 4px solid #f8881c;
+}
+.menu-second li a {
+    background-color: #f6f6f6;
+    line-height: 25px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    font-size: 12px;
+    text-align: left;
+    color: #979898;
+    padding-left: 35px;
+}
+.menu-second li a:hover {
+    text-decoration: none;
+    background-color: #87CEFF;
+    border-right: 3px solid #f8881c;
+}
+/* 设置页脚固定页面最底部 */
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #f5f5f5;
+	padding: 15px 0;
+}
+
+.copyright {
+	width: 1000px;
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+	margin: 0 auto;
+}
+/* 主体部分 */
+.form-area{
+    resize: none;
+    word-wrap:normal;
+}
+.form-group{
+    width: 100%;
+    border: 1px solid #E6E9ED;
+    padding: 10px 20px;
+}
+/* 鼠标指针位置指示
+.form-group:hover{
+    border: 1px solid #f8881c;
+}
+*/
+.btn-reset,
+.btn-submit{
+    margin-left: 180px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.data-own,
+.data-database{
+    border: 1px solid #DCDCDC;
+    height: 220px;
+    width: 344px;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.data-database{
+    margin-left: 10px;
+}
+#divDatasets{
+	margin-top:16px;
+}
+#divDatasets div{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.con-select{
+    padding-left: 0;
+}
+#divFileupload{
+	width: 344px;
+}
+#select-file{
+    display:none;
+}
+#btn-upload{
+    height: 36px;
+    width: 80px;
+    /*border-radius:12px;*/
+}
+
+#filename{
+    height: 36px;
+    width: 230px;
+    line-height: 36px;
+    margin-left: 6px;
+    border: 1px dotted #979898;
+    padding-left: 8px;
+    border-radius: 4px;
+}
+
+#locationFileName{
+    height: 36px;
+    width: 230px;
+    line-height: 36px;
+    margin-left: 6px;
+    border: 1px dotted #979898;
+    padding-left: 8px;
+    border-radius: 4px;
+}
+#ppiFileName{
+    height: 36px;
+    width: 230px;
+    line-height: 36px;
+    margin-left: 6px;
+    border: 1px dotted #979898;
+    padding-left: 8px;
+    border-radius: 4px;
+}
+
+#expressionFileName{
+    height: 36px;
+    width: 230px;
+    line-height: 36px;
+    margin-left: 6px;
+    border: 1px dotted #979898;
+    padding-left: 8px;
+    border-radius: 4px;
+}
+
+.captchaDiv{
+	float:left;
+	width:100px;
+	line-height: 32px;
+	margin-right: 10px;
+	background-color:#eee;
+	color: #d9534f;
+	border-radius:4px;
+	border:1px solid #ccc;
+}
+#captchaOperation{
+	margin:0 10px;
+}
+#captcha{
+	width:130px;
+	border-radius:4px;
+}
+.locationDiv,
+.emailDiv{
+	padding: 0;
+}
+.locationDiv{
+	padding-right: 10px;
+}
+.titLabel{
+	color:#428bca;
+}
